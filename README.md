@@ -4,10 +4,10 @@ A simple one-zone model of Type I X-ray bursts in python. The accretion rate in 
 
 e.g. `python onezone.py 1.0 1e4` shows a series of flashes
 
-![lightcurve](https://github.com/andrewcumming/onezone/mdot=1.png)
-![column depth-temperature](https://github.com/andrewcumming/onezone/mdot=1_yT.png)
+![lightcurve](https://github.com/andrewcumming/onezone/master/mdot=1.png)
+![column depth-temperature](https://github.com/andrewcumming/onezone/master/mdot=1_yT.png)
 
 e.g. `python onezone.py 6.0 1e4` shows the evolution to stable burning
 
-![column depth-temperature](https://github.com/andrewcumming/onezone/mdot=6_yT.png)
+![column depth-temperature](https://github.com/andrewcumming/onezone/master/mdot=6_yT.png)
 
