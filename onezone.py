@@ -76,7 +76,7 @@ class OneZone:
 	
 		return [dTdt,dydt]
 	
-	def evolve(self,mdot=1.0,tend=1e4):
+	def evolve(self,mdot=1.0,tend=1e4,rtol=1e-3,atol=1e-3):
 		self.mdot=mdot*self.mdot_Edd	
 		self.tend=tend
 		# Integrate
@@ -85,7 +85,7 @@ class OneZone:
 		result=[]
 		inic = [2e8,2e8]  # initial temperature and column depth
 		solver.set_initial_value(inic,0.0)
-		solver.set_integrator('vode')
+		solver.set_integrator('vode',atol=atol,rtol=rtol)
 		while solver.successful() and solver.t<tend:
 			solver.integrate(self.tend,step=True)
 			t.append(solver.t)
