@@ -125,7 +125,7 @@ if __name__ == '__main__':
 
 	# accretion rate and time to run from the command line
 	if (len(sys.argv)<3):
-		print 'Syntax: onezone.py <mdot> <time>'
+		print('Syntax: onezone.py <mdot> <time>')
 		exit()
 	mdot=float(sys.argv[1])
 	tend=float(sys.argv[2])
@@ -133,9 +133,9 @@ if __name__ == '__main__':
 	onezone = OneZone()
 	time, y, T, L, deltat = onezone.evolve(mdot,tend)
 
-	print 'Time between flashes=',deltat
+	print('Time between flashes=',deltat)
 	n=len(L)
-	print 'Luminosity range = ',max(L[0.5*n:])-min(L[0.5*n:])
+	print('Luminosity range = ',max(L[n//2:])-min(L[n//2:]))
 
 	# PLOT THE RESULTS
 
